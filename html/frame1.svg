@@ -1,0 +1,26 @@
+
+<svg width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .loop { fill: none; stroke: #4CAF50; stroke-width: 15; }
+      .text { font-family: sans-serif; font-size: 14px; fill: #333; }
+    </style>
+  </defs>
+
+  <!-- Infinity Loop Path -->
+  <path class="loop" d="M100,150 C100,50 300,50 300,150 S500,250 500,150 300,50 300,150 100,250 100,150Z"/>
+
+  <!-- Text Labels Around the Loop -->
+  <text x="140" y="80" class="text">Plan</text>
+  <text x="200" y="60" class="text">Code</text>
+  <text x="280" y="80" class="text">Build</text>
+  <text x="350" y="120" class="text">Test</text>
+  <text x="400" y="180" class="text">Release</text>
+  <text x="350" y="240" class="text">Deploy</text>
+  <text x="260" y="240" class="text">Operate</text>
+  <text x="160" y="200" class="text">Monitor</text>
+
+  <!-- Optional: Center icon -->
+  <circle cx="300" cy="150" r="20" fill="#2196F3" />
+  <text x="290" y="155" fill="#fff" font-size="14" font-family="sans-serif">CI</text>
+</svg>

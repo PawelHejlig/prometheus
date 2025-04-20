@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Infinity Loop</title>
+  <style>
+    body {
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    svg {
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .loop {
+      stroke-dasharray: 1500;
+      stroke-dashoffset: 1500;
+      animation: drawLoop 4s ease-out forwards;
+    }
+
+    @keyframes drawLoop {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .text {
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      animation-delay: 2s;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Inline SVG -->
+  <svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <style>
+        .loop { fill: none; stroke: #4CAF50; stroke-width: 15; }
+        .text { font-size: 14px; fill: #333; }
+      </style>
+    </defs>
+
+    <path class="loop" d="M100,150 C100,50 300,50 300,150 S500,250 500,150 300,50 300,150 100,250 100,150Z"/>
+
+    <text x="140" y="80" class="text">Plan</text>
+    <text x="200" y="60" class="text">Code</text>
+    <text x="280" y="80" class="text">Build</text>
+    <text x="350" y="120" class="text">Test</text>
+    <text x="400" y="180" class="text">Release</text>
+    <text x="350" y="240" class="text">Deploy</text>
+    <text x="260" y="240" class="text">Operate</text>
+    <text x="160" y="200" class="text">Monitor</text>
+
+    <circle cx="300" cy="150" r="20" fill="#2196F3" />
+    <text x="290" y="155" fill="#fff" font-size="14">CI</text>
+  </svg>
+</body>
+</html>
